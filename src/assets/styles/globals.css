@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-sans text-root;
+    @apply h-full;
+  }
+
+  body {
+    @apply text-body font-normal;
+    @apply min-h-full;
+    @apply overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  /* GRID */
+  .default-grid {
+    @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-x-20 md:gap-x-24 xl:gap-x-28 2xl:gap-x-32;
+  }
+  .heading {
+    &-h1 {
+      @apply text-h1 font-bold;
+    }
+    &-h2 {
+      @apply text-h2 font-normal;
+    }
+    &-h3 {
+      @apply text-h3 font-bold;
+    }
+  }
+}

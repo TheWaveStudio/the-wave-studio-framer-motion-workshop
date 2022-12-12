@@ -1,0 +1,18 @@
+.Switch {
+  @apply w-[40rem] h-[10rem];
+  @apply bg-primary-1200/50;
+  @apply flex justify-start items-center;
+  @apply rounded-[5rem];
+  @apply p-5;
+  @apply cursor-pointer;
+
+  &[data-isOn='true'] {
+    @apply justify-end;
+  }
+
+  .handle {
+    @apply w-[8rem] h-[8rem];
+    @apply bg-primary-400;
+    @apply rounded-[4rem];
+  }
+}
