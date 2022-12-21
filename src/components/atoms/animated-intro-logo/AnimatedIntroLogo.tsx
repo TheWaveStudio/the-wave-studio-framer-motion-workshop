@@ -18,9 +18,20 @@ const draw = {
   },
 };
 
-export const AnimatedIntroLogo = ({ className }: { className?: string }) => {
+export const AnimatedIntroLogo = ({
+  className,
+  setSelectedNavItem,
+}: {
+  className?: string;
+  setSelectedNavItem: React.Dispatch<
+    React.SetStateAction<{
+      label: string;
+      href: string;
+    } | null>
+  > | null;
+}) => {
   return (
-    <Link href="/">
+    <Link href="/" onClick={() => setSelectedNavItem?.(null)}>
       <div className={className}>
         <motion.svg
           fill="none"

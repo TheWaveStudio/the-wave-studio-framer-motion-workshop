@@ -11,8 +11,10 @@ import { NAV_ITEMS } from 'src/utils';
 import { useRouter } from 'next/router';
 
 export const AppContext = createContext<{
-  selectedNavItem: { label: string };
-  setSelectedNavItem: Dispatch<SetStateAction<{ label: string }>> | null;
+  selectedNavItem: { label: string; href: string } | null;
+  setSelectedNavItem: Dispatch<
+    SetStateAction<{ label: string; href: string } | null>
+  > | null;
 }>({
   selectedNavItem: NAV_ITEMS[0],
   setSelectedNavItem: null,
@@ -20,7 +22,10 @@ export const AppContext = createContext<{
 
 export default function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
-  const [selectedNavItem, setSelectedNavItem] = useState(NAV_ITEMS[0]);
+  const [selectedNavItem, setSelectedNavItem] = useState<{
+    label: string;
+    href: string;
+  } | null>(NAV_ITEMS[0]);
 
   useEffect(() => {
     const currentPage = NAV_ITEMS.find((path) => path.href === pathname);

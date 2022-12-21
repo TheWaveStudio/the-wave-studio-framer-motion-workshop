@@ -10,7 +10,10 @@ export const Navigation = () => {
 
   return (
     <nav className="w-screen  fixed bottom-0 left-0 bg-primary-400 flex content-center justify-center">
-      <AnimatedIntroLogo className="flex justify-center items-center gap-10  ml-10 py-5" />
+      <AnimatedIntroLogo
+        className="flex justify-center items-center gap-10  ml-10 py-5"
+        setSelectedNavItem={setSelectedNavItem}
+      />
 
       <ul className="flex gap-10 mx-auto">
         {NAV_ITEMS.map((item) => (
