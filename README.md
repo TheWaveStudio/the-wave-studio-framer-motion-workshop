@@ -22,3 +22,6 @@ This project contains some interactive examples for Framer Motion and React. Thi
 - [Gestures](https://www.framer.com/docs/gestures/)
 
 This workshop is curated by **Michele Cocuccio** for [The Wave Studio](https://www.thewavestudio.it/)
+
+## Run
+To run this project simply run `yarn` or `npm i` to install dependencies, and then run `npm run dev` or `yarn dev` to run it
